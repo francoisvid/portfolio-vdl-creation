@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                         }`}
                     >
                         {/* Added trust indicators */}
-                        <div className="flex justify-center items-center gap-6 mb-8">
+                        <div className="flex justify-center items-center gap-6 mb-8 mt-8">
                             <div className="flex items-center text-orange-300">
                                 <Award size={16} className="mr-1" />
                                 <span className="text-sm">6+ ans d'expérience</span>
@@ -124,8 +124,7 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Enhanced scroll indicator */}
-                <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center animate-bounce">
-                    <span className="text-white text-sm mb-2 opacity-70">Découvrir plus</span>
+                <div className="flex flex-col items-center animate-bounce mt-8 ">
                     <a
                         href="#projects"
                         onClick={(e) => {
