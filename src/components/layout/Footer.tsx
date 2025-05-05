@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
+    <footer className="bg-orange-50 dark:bg-gray-800 transition-colors duration-300">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
