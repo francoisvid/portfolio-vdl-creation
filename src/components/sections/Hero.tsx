@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { ArrowDown, Code, Smartphone, Globe, Network, Star, Award, ArrowRight } from 'lucide-react';
+import React, {useEffect, useState} from 'react';
+import {ArrowDown, Code, Smartphone, Globe, Network, Star, Award, ArrowRight} from 'lucide-react';
 import Button from '../ui/Button';
 import hero from '../../assets/projects/hero-home.png';
 
@@ -18,15 +18,15 @@ const Hero: React.FC = () => {
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
         if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
+            section.scrollIntoView({behavior: 'smooth'});
         }
     };
 
     const skills = [
-        { icon: <Code size={20} />, text: 'Développement Web', stat: '6+ ans d\'expérience' },
-        { icon: <Globe size={20} />, text: 'Applications web', stat: '20+ sites lancés' },
-        { icon: <Smartphone size={20} />, text: 'Applications Mobiles', stat: '2 apps développées' },
-        { icon: <Network size={20} />, text: 'Optimisation SEO', stat: '200% ROI moyen' },
+        {icon: <Code size={20}/>, text: 'Développement Web', stat: '6+ ans d\'expérience'},
+        {icon: <Globe size={20}/>, text: 'Applications web', stat: '20+ sites lancés'},
+        {icon: <Smartphone size={20}/>, text: 'Applications Mobiles', stat: '2 apps développées'},
+        {icon: <Network size={20}/>, text: 'Optimisation SEO', stat: '200% ROI moyen'},
     ];
 
     return (
@@ -53,25 +53,28 @@ const Hero: React.FC = () => {
                         {/* Added trust indicators */}
                         <div className="flex justify-center items-center gap-6 mb-8 mt-8">
                             <div className="flex items-center text-orange-300">
-                                <Award size={16} className="mr-1" />
+                                <Award size={16} className="mr-1"/>
                                 <span className="text-sm">6+ ans d'expérience</span>
                             </div>
                             <div className="flex items-center text-orange-300">
-                                <Star fill="currentColor" size={16} className="mr-1" />
+                                <Star fill="currentColor" size={16} className="mr-1"/>
                                 <span className="text-sm">100% clients satisfaits</span>
                             </div>
                         </div>
 
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight text-white">
-                            Développeur<br />
-                            <span className="bg-gradient-to-r from-orange-400 to-orange-300 text-transparent bg-clip-text">
-                                Web & Mobile
-                            </span>{' '}
-                            Indépendant
+                        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                           <span
+                               className="text-5xl sm:text-6xl md:text-8xl  bg-gradient-to-r from-orange-400 to-orange-300 text-transparent bg-clip-text"
+                               style={{fontFamily: 'Pacifico, cursive'}}
+                           >
+                                VDL Création <br/>
+                           </span>
+                            Développeur Web & Mobile Indépendant
                         </h1>
 
                         <p className="text-lg sm:text-2xl text-gray-200 mb-4 leading-relaxed max-w-3xl mx-auto">
-                            Je transforme vos idées en solutions digitales performantes, en mettant l'expérience utilisateur
+                            Je transforme vos idées en solutions digitales performantes, en mettant l'expérience
+                            utilisateur
                             et votre ROI au cœur de chaque projet.
                         </p>
 
@@ -86,10 +89,11 @@ const Hero: React.FC = () => {
                                     className={`group p-4 bg-white/20 backdrop-blur-sm rounded-lg text-white transform transition-all duration-300 hover:bg-white/30 hover:scale-105 ${
                                         isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                                     }`}
-                                    style={{ transitionDelay: `${index * 100}ms` }}
+                                    style={{transitionDelay: `${index * 100}ms`}}
                                 >
                                     <div className="flex items-center mb-2">
-                                        <span className="mr-3 text-orange-300 group-hover:text-orange-400 transition-colors">
+                                        <span
+                                            className="mr-3 text-orange-300 group-hover:text-orange-400 transition-colors">
                                             {skill.icon}
                                         </span>
                                         <span className="font-semibold">{skill.text}</span>
@@ -109,7 +113,7 @@ const Hero: React.FC = () => {
                                 className="group flex items-center"
                             >
                                 Voir mes projets
-                                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform"/>
                             </Button>
                             <Button
                                 variant="outline"
@@ -134,7 +138,7 @@ const Hero: React.FC = () => {
                         className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm text-white transition-all hover:bg-white/30 hover:shadow-lg"
                         aria-label="Faire défiler vers les projets"
                     >
-                        <ArrowDown size={20} />
+                        <ArrowDown size={20}/>
                     </a>
                 </div>
             </div>
