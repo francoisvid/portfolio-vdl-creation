@@ -91,7 +91,7 @@ const Hero: React.FC = () => {
                                     }`}
                                     style={{transitionDelay: `${index * 100}ms`}}
                                 >
-                                    <div className="flex items-center mb-2">
+                                    <div className="flex items-center justify-center mb-2">
                                         <span
                                             className="mr-3 text-orange-300 group-hover:text-orange-400 transition-colors">
                                             {skill.icon}
