@@ -1,39 +1,15 @@
-import React from "react";
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import React, {useState} from "react";
+import {Star, Quote, ChevronLeft, ChevronRight, MessageSquare} from "lucide-react";
 import SectionTitle from "../ui/SectionTitle.tsx";
-
-const testimonials = [
-    {
-        id: 1,
-        name: "Jonathan Gomez",
-        company: "Andragogy",
-        role: "CEO",
-        text: "C'est toujours un plaisir de travailler avec François, il sait s'adapter et faire face aux défis sur sa route, tout en gardant sa bonne humeur et sa sympathie. Compétent, agréable et toujours à la recherche d'amélioration, je suis convaincu qu'il sera satisfaire les entreprises qui feront appel à lui.",
-        rating: 5,
-        project: "Andragogy"
-    },
-    {
-        id: 2,
-        name: "Valentin Giglio",
-        company: "Le salon 26",
-        role: "Responsable",
-        text: "François est patient, rigoureux et très à l'écoute. Il a réalisé mon site sur mesure et je suis très content. Je le recommande vivement !",
-        rating: 5,
-        project: "Application web"
-    },
-    {
-        id: 3,
-        name: "Marvin Skhiri",
-        company: "Banana Rally",
-        role: "Directrice Marketing",
-        text: "Travaille tres serieux, à été  a l’écoute de ma demande, n’hésite pas à donner ses idées pour avancer dans le projet !  Tres agreable ",
-        rating: 5,
-        project: "Banana Rally"
-    },
-];
+import testimonialData from '../../data/testimonials.json';
+import TestimonialForm from './TestimonialForm';
 
 const Testimonials: React.FC = () => {
-    const [currentIndex, setCurrentIndex] = React.useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [showForm, setShowForm] = useState(false);
+
+    const testimonials = testimonialData.testimonials;
+    const currentTestimonial = testimonials[currentIndex];
 
     const next = () => {
         setCurrentIndex((prev) => (prev + 1) % testimonials.length);
@@ -44,8 +20,6 @@ const Testimonials: React.FC = () => {
             prev === 0 ? testimonials.length - 1 : prev - 1
         );
     };
-
-    const currentTestimonial = testimonials[currentIndex];
 
     return (
         <section id="testimonials" className="py-20 bg-orange-50 dark:bg-gray-800 transition-colors duration-300">
@@ -61,7 +35,7 @@ const Testimonials: React.FC = () => {
                     {/* Testimonial principale */}
                     <div className="relative">
                         <div className="bg-white rounded-lg shadow-xl p-8 md:p-12">
-                            <Quote className="absolute top-6 left-6 text-orange-200" size={40} />
+                            <Quote className="absolute top-6 left-6 text-orange-200" size={40}/>
 
                             <div className="relative z-10">
                                 <div className="flex items-center gap-1 mb-6">
@@ -79,7 +53,8 @@ const Testimonials: React.FC = () => {
                                 </blockquote>
 
                                 <div className="flex items-center gap-4">
-                                    <div className="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center">
+                                    <div
+                                        className="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center">
                                         <span className="text-orange-700 font-bold">
                                             {currentTestimonial.name.charAt(0)}
                                         </span>
@@ -105,7 +80,7 @@ const Testimonials: React.FC = () => {
                             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:text-orange-600 transition-colors"
                             aria-label="Témoignage précédent"
                         >
-                            <ChevronLeft size={24} />
+                            <ChevronLeft size={24}/>
                         </button>
 
                         <button
@@ -113,7 +88,7 @@ const Testimonials: React.FC = () => {
                             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-gray-600 hover:text-orange-600 transition-colors"
                             aria-label="Témoignage suivant"
                         >
-                            <ChevronRight size={24} />
+                            <ChevronRight size={24}/>
                         </button>
                     </div>
 
@@ -131,6 +106,30 @@ const Testimonials: React.FC = () => {
                                 aria-label={`Voir témoignage ${index + 1}`}
                             />
                         ))}
+                    </div>
+
+                    {/* Formulaire de témoignage */}
+                    <div className="mt-12 text-center">
+                        {!showForm ? (
+                            <button
+                                onClick={() => setShowForm(true)}
+                                className="group inline-flex items-center px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-all duration-300 transform hover:scale-105"
+                            >
+                                <MessageSquare className="mr-2 group-hover:rotate-12 transition-transform duration-300"
+                                               size={20}/>
+                                Laisser un témoignage
+                            </button>
+                        ) : (
+                            <div className="relative animate-fadeInScale">
+                                <div
+                                    className="animate-fadeIn"
+                                    onClick={() => setShowForm(false)}
+                                />
+                                <div className="relative z-50">
+                                    <TestimonialForm onClose={() => setShowForm(false)}/>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 

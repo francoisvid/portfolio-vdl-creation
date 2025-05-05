@@ -1,0 +1,34 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Jonathan Gomez",
+      "company": "Andragogy",
+      "role": "CEO",
+      "text": "C'est toujours un plaisir de travailler avec François, il sait s'adapter et faire face aux défis sur sa route, tout en gardant sa bonne humeur et sa sympathie. Compétent, agréable et toujours à la recherche d'amélioration, je suis convaincu qu'il saura satisfaire les entreprises qui feront appel à lui.",
+      "rating": 5,
+      "project": "Andragogy",
+      "date": "2024-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Valentin Giglio",
+      "company": "Le salon 26",
+      "role": "Responsable",
+      "text": "François est patient, rigoureux et très à l'écoute. Il a réalisé mon site sur mesure et je suis très content. Je le recommande vivement !",
+      "rating": 5,
+      "project": "Application web",
+      "date": "2024-02-20"
+    },
+    {
+      "id": 3,
+      "name": "Marvin Skhiri",
+      "company": "Banana Rally",
+      "role": "Directeur Marketing",
+      "text": "Travail très sérieux, à été à l'écoute de ma demande, n'hésite pas à donner ses idées pour avancer dans le projet ! Très agréable.",
+      "rating": 5,
+      "project": "Banana Rally",
+      "date": "2024-03-10"
+    }
+  ]
+}
