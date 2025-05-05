@@ -106,7 +106,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
                     <a href={project.liveUrl}
                        target="_blank"
                        rel="noopener noreferrer"
-                       className="flex items-center justify-center py-2.5 px-4 bg-gradient-to-r from-orange-400 to-orange-700 dark:from-orange-500 dark:to-orange-800 text-white rounded-lg hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg font-medium w-full"
+                       className="flex items-center justify-center py-2.5 px-4 bg-orange-600 dark:bg-orange-500 text-white rounded-lg hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg font-medium w-full"
                     >
                         <span>Visiter le site</span>
                         <ExternalLink size={16} className="ml-2"/>
@@ -116,7 +116,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project}) => {
             {project.liveUrl === "" && (
                 <div className="absolute bottom-0 left-0 right-0 px-6 pb-4">
                     <a rel="noopener noreferrer"
-                       className="flex items-center justify-center py-2.5 px-4 bg-gradient-to-r from-orange-400 to-orange-700 dark:from-orange-500 dark:to-orange-800 text-white rounded-lg hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg font-medium w-full"
+                       className="flex items-center justify-center py-2.5 px-4 bg-orange-400 dark:bg-orange-500 text-white rounded-lg hover:opacity-90 transition-all duration-300 shadow-md hover:shadow-lg font-medium w-full"
                     >
                         <span>Indisponible</span>
                     </a>
