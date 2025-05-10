@@ -1,14 +1,14 @@
 {
   "testimonials": [
     {
-      "id": 1,
-      "name": "Jonathan Gomez",
-      "company": "Andragogy",
-      "role": "CEO",
-      "text": "C'est toujours un plaisir de travailler avec François, il sait s'adapter et faire face aux défis sur sa route, tout en gardant sa bonne humeur et sa sympathie. Compétent, agréable et toujours à la recherche d'amélioration, je suis convaincu qu'il saura satisfaire les entreprises qui feront appel à lui.",
-      "rating": 5,
-      "project": "Andragogy",
-      "date": "2024-01-15"
+        "id": 1,
+        "name": "CASTELLS",
+        "company": "OCCITAGYM",
+        "role": "créatrice de l’association",
+        "text": "Merci à François d’avoir créé mon tout premier site internet : vitrine de mon activité Fitness/Pilates/Yoga sur la commune de Générac.\nMerci pour son professionnalisme, je recommande vivement.",
+        "rating": 5,
+        "project": "Site Web",
+        "date": "2025-05-07"
     },
     {
       "id": 2,
@@ -22,6 +22,16 @@
     },
     {
       "id": 3,
+      "name": "Jonathan Gomez",
+      "company": "Andragogy",
+      "role": "CEO",
+      "text": "C'est toujours un plaisir de travailler avec François, il sait s'adapter et faire face aux défis sur sa route, tout en gardant sa bonne humeur et sa sympathie. Compétent, agréable et toujours à la recherche d'amélioration, je suis convaincu qu'il saura satisfaire les entreprises qui feront appel à lui.",
+      "rating": 5,
+      "project": "Andragogy",
+      "date": "2024-01-15"
+    },
+    {
+      "id": 4,
       "name": "Marvin Skhiri",
       "company": "Banana Rally",
       "role": "Directeur Marketing",
